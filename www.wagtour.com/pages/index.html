@@ -1,4 +1,405 @@
 {% extends "base.html" %}
 {% block content %}
-Welcome to Wagtour
+
+<div class="container-fluid">
+	<div class="row-fluid">
+	    <!-- SIDEBAR 
+		================================================== -->
+		<div class="span3">
+			<div class="well sidebar-nav sidebar-nav-fixed">
+				<div class="logo">
+					<!-- Logo --><a href="#home">Afolique</a>
+				</div>
+				<ul>
+					<!-- MENU - Note that "#..." is the anchor id. Each one should correspond to our id sections below.
+                    ================================================== -->
+					<li><a class="home" href="#home">Home</a></li>
+					<li class="description">Sweet home</li>
+					
+					<li><a class="about" href="#about">About me</a></li>
+					<li class="description">Who I am</li>
+					
+					<li><a class="services" href="#services">Services</a></li>
+					<li class="description">What I offer</li>
+					
+					<li><a class="portofolio" href="#portofolio">Portfolio</a></li>
+					<li class="description">Two styles</li>
+					
+					<li><a class="contact" href="#contact">Contact</a></li>
+					<li class="description">Get in touch</li>
+				</ul>
+				<div class="social">
+					<a href="#"><img src="{{ STATIC_URL }}/img/facebook.png" alt=""></a>
+					<a href="#"><img src="{{ STATIC_URL }}/img/twitter.png" alt=""></a>
+				</div>
+			</div>
+		</div>
+		
+		<!-- MAIN CONTENT
+		================================================== -->		
+		<div class="span9">		
+			<!-- HOME SECTION
+            ================================================== -->
+			<section id="home">
+			<div class="hero-unit">
+				<div class="slider-wrapper theme-default">
+					<div id="slider" class="nivoSlider">
+						<!-- Slider items here-->
+						<a href="#"><img src="{{ STATIC_URL }}/img/homeslides/slide1.jpg" alt="" title="Welcome to Afolique - Responsive Theme, hope you'll like it as much as I do !"/></a>
+						<a href="#"><img src="{{ STATIC_URL }}/img/homeslides/slide2.jpg" alt="" title="Easy to edit, comes with documentation and support from its author!"/></a>
+						<a href="#"><img src="{{ STATIC_URL }}/img/homeslides/slide3.jpg" alt="" title="Ajax contact form - just add your e-mail address and it's ready to work!"/></a>
+					</div>
+					    <!-- Some shadow--><img src="{{ STATIC_URL }}/img/shadow.png" alt="" class="shadowslider">					
+				</div>
+			</div>
+			</section>
+			
+			<!-- ABOUT SECTION
+            ================================================== -->
+			<section id="about">
+			<div class="hero-unittext">
+				<h1>- A picture is worth a thousand words -</h1>
+				<h2>and that's why you should <span class="highlighthero">hire me</span></h2>
+			</div>
+			<div class="row-fluid">
+				<div class="span8">
+					<h1>ABOUT ME</h1>
+					<p>
+						 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+					</p>
+					<p>
+						 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+					</p>
+				</div>
+				<div class="span4">
+					<div class="tdiv t5">
+						 I am now available to take your next project. Donec id elit non mi porta gravida at eget metus. <br/><br/>
+						<p>
+						 Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. Use my contact form for a free quote!
+						</p>
+					</div>
+				</div>
+			</div>
+			<br/>
+			<div class="row-fluid">
+				<div class="span4">
+					<h2>Why choose me</h2>
+					<p>
+						 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+					</p>
+					<p class="fancystyle">
+						 Professional
+					</p>
+				</div>
+				<div class="span4">
+					<h2>My Experience</h2>
+					<p>
+						 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+					</p>
+					<p class="fancystyle">
+						 Enthusiastic
+					</p>
+				</div>
+				<div class="span4">
+					<h2>Prices</h2>
+					<p>
+						 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+					</p>
+					<p class="fancystyle">
+						 Affordable
+					</p>
+				</div>
+			</div>
+			</section>
+			<div class="pagebreak">
+			</div>	
+			
+			<!-- SERVICES
+            ================================================== -->
+			<section id="services">
+			<div class="separator"></div><br/>
+			<div class="row-fluid">
+				<div class="span12">
+					<h1>SERVICES</h1>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="span6">
+					<span class="servicetitle">fashion shooting</span>
+					<p>
+						 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+					</p>
+					<p>
+						 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+					</p>
+				</div>
+				<div class="span6">
+					<span class="servicetitle grey">flowers design</span>
+					<p>
+						 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+					</p>
+					<p>
+						 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+					</p>
+				</div>
+			</div>
+			<br/>
+			<div class="row-fluid">
+				<div class="span6">
+					<span class="servicetitle grey">birthday parties</span>
+					<p>
+						 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+					</p>
+					<p>
+						 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+					</p>
+				</div>
+				<div class="span6">
+					<span class="servicetitle">wedding photo</span>
+					<p>
+						 I am currently available for your next project.Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. Use my contact form for a free quote!
+					</p>
+					<p>
+						 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
+					</p>
+				</div>
+			</div>
+			</section>
+			<div class="pagebreak">
+			</div>
+			
+			<!-- PORTOFOLIO SIMPLE
+            ================================================== -->
+			<section id="portofolio">
+			<div class="separator"></div><br/>
+			<div class="row-fluid">
+				<div class="span10 addspace">
+					<h1>PORTOFOLIO 1 + Scroll Down</h1>
+				</div>
+			</div>
+			<!-- First portofolio simple row-->
+			<div class="row-fluid">
+				<div class="span4 portof">
+						<img src="{{ STATIC_URL }}/img/portofolio1/slide1.jpg" class="grayscale" alt="">
+					<div class="projectdesc">
+						<p>
+							 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum mas.
+						</p>
+						<p>
+							<a href="#" class="minibutton">view project</a>
+						</p>
+					</div>
+				</div>
+				
+				<div class="span4 portof">
+						<img src="{{ STATIC_URL }}/img/portofolio1/slide2.jpg" class="grayscale" alt="">
+					<div class="projectdesc">
+						<p>
+							 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum mas.
+						</p>
+						<p>
+							<a href="#" class="minibutton">view project</a>
+						</p>
+					</div>
+				</div>
+				
+				<div class="span4 portof">
+						<img src="{{ STATIC_URL }}/img/portofolio1/slide3.jpg" class="grayscale" alt="">
+					<div class="projectdesc">
+						<p>
+							 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum mas.
+						</p>
+						<p>
+							<a href="#" class="minibutton">view project</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<br/>
+			<!-- Second portofolio simple row-->
+			<div class="row-fluid">
+				<div class="span4 portof">
+						<img src="{{ STATIC_URL }}/img/portofolio1/slide4.jpg" class="grayscale" alt="">
+					<div class="projectdesc">
+						<p>
+							 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum mas.
+						</p>
+						<p>
+							<a href="#" class="minibutton">view project</a>
+						</p>
+					</div>
+				</div>
+				
+				<div class="span4 portof">
+						<img src="{{ STATIC_URL }}/img/portofolio1/slide5.jpg" class="grayscale" alt="">
+					<div class="projectdesc">
+						<p>
+							 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum mas.
+						</p>
+						<p>
+							<a href="#" class="minibutton">view project</a>
+						</p>
+					</div>
+				</div>
+				
+				<div class="span4 portof">
+						<img src="{{ STATIC_URL }}/img/portofolio1/slide6.jpg" class="grayscale" alt="">
+					<div class="projectdesc">
+						<p>
+							 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum mas.
+						</p>
+						<p>
+							<a href="#" class="minibutton">view project</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			</section>
+			<div class="pagebreak">
+			</div>
+			<br/>
+			
+			<!-- PORTOFOLIO FILTERABLE
+            ================================================== -->
+			<div class="separator"></div>
+			<div class="row-fluid">
+				<div class="span12 addspace">
+					<h1>PORTOFOLIO 2</h1>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="span12 addspace">				   
+					<aside class="clearfix">
+					<nav class="category clearfix">
+					<ul> <!-- Define portofolio categories-->
+						<li><a href="#" class="selected" data-filter="*">All</a></li>
+						<li><a href="#" data-filter=".flowers">Flowers</a></li>
+						<li><a href="#" data-filter=".nature">Nature</a></li>
+						<li><a href="#" data-filter=".animals">Animals</a></li>
+						<li><a href="#" data-filter=".buildings">Buildings</a></li>
+						<li><a href="#" data-filter=".cities">Cities</a></li>
+					</ul>
+					</nav>
+					</aside>					    
+						<section class="main clearfix">
+						<div class="fportfolio isotope">
+						     <!-- Add images-->
+							<article class="entry animals buildings isotope-item">
+							<img src="{{ STATIC_URL }}/img/filterable/1.jpg" alt="">
+							<span class="hover"></span>
+							</article>
+							
+							<article class="entry buildings animals isotope-item">
+							<img src="{{ STATIC_URL }}/img/filterable/1.jpg" alt="">
+							<span class="hover"></span>
+							</article>
+							
+							<article class="entry flowers nature isotope-item">
+							<img src="{{ STATIC_URL }}/img/filterable/1.jpg" alt="">
+							<span class="hover"></span>
+							</article>
+							
+							<article class="entry nature cities flowers isotope-item">
+							<img src="{{ STATIC_URL }}/img/filterable/1.jpg" alt="">
+							<span class="hover"></span>
+							</article>
+							
+							<article class="entry animals cities buidlings isotope-item">
+							<img src="{{ STATIC_URL }}/img/filterable/1.jpg" alt="">
+							<span class="hover"></span>
+							</article>
+							
+							<article class="entry buldings cities animals flowers isotope-item">
+							<img src="{{ STATIC_URL }}/img/filterable/1.jpg" alt="">
+							<span class="hover"></span>
+							</article>
+						</div>
+						</section>
+				</div>
+			</div>
+			<div class="pagebreak"></div>
+			<br/>
+			
+			<!-- CONTACT
+			================================================== -->
+			<section id="contact">
+			<div class="separator"></div><br/>
+			<div class="row-fluid">
+				<div class="span12 addspace">
+					<h1>GET IN TOUCH</h1>
+				</div>
+			</div>
+			<div class="row-fluid" style="min-height:520px;">
+				<div class="span7">
+					<div class="done">
+						<div class="alert alert-success">
+							<button type="button" class="close" data-dismiss="alert">x</button>
+							<strong>Message sent successfully!</strong><br/>
+						</div>
+					</div>
+					<div class="form">
+						<form method="post" action="contact.php" id="contactform">
+							<table>
+							<tbody>
+							<tr class="element">
+								<td class="noborder">
+								</td>
+								<td class="noborder">
+									 <!-- Name--><input type="text" name="name" class="text input-xxlarge" placeholder="Name">
+								</td>
+							</tr>
+							<tr class="element">
+								<td class="noborder">
+								</td>
+								<td class="noborder">
+									 <!-- Email--><input type="text" name="email" class="text input-xxlarge" placeholder="E-mail address">
+								</td>
+							</tr>
+							<tr class="element texttop">
+								<td class="noborder">
+								</td>
+								<td class="noborder">
+									 <!-- Message--><textarea name="comment" class="text textarea input-xxlarge" rows="7" placeholder="Message, comments, feedback"></textarea>
+								</td>
+							</tr>
+							<tr class="element">
+								<td class="noborder">
+									 &nbsp;
+								</td>
+								<td class="noborder">
+									 <!-- Submit--><input type="submit" id="submit" class="btn" value="Submit">
+									<div class="loading">
+									</div>
+								</td>
+							</tr>
+							</tbody>
+							</table>
+						</form>
+					</div>
+					<!-- Delete this line--><div class="scan"><img src="{{ STATIC_URL }}/img/temp/scan.png" alt=""> <img src="{{ STATIC_URL }}/img/temp/code.png" alt=""></div><!-- Delete this line-->
+				</div>
+				<div class="span5">
+				 <!-- Google map code goes here--><img src="{{ STATIC_URL }}/img/temp/dummymap.png" alt="" style="width:397px; height:237px;box-shadow: 1px 1px 1px 1px #AAA;">	
+				</div>
+			</div>		
+		</section>
+		<br/>
+		
+		<!-- FOOTER
+            ================================================== -->
+		<div class="row-fluid">
+			<div class="span12 addspace center">
+				<p>
+					<small>&copy; 2013 Your Website Name. Afolique - Responsive Portofolio Theme</small>
+				</p>
+			</div>
+		</div>	
+		
+		<!-- CLOSE ALL DIVS
+            ================================================== -->		
+	</div><!--/.span9-->
+    </div><!--/.row-fluid-->
+</div><!--/.container-fluid-->
+
+
 {% endblock %}
