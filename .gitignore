@@ -1,0 +1,6 @@
+.build
+env
+*.pyc
+config.json
+.idea
+.DS_Store
