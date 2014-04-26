@@ -90,8 +90,10 @@
 				</div>
 			</div>
 			<!-- First gallery simple row-->
+
+			{% for row in rows %}
 			<div class="row-fluid">
-				{% for tour in tours %}
+				{% for tour in row %}
 				<div class="span4 gallery">
 						<img src="{{ STATIC_URL }}/img/portofolio1/slide{{ tour.page_num }}.jpg" class="grayscale" alt="">
 					<div class="projectdesc">
@@ -106,6 +108,8 @@
 				{% endfor %}
 				
 			</div>
+			<br/>
+			{% endfor %}
 
 			</section>
 			<div class="pagebreak">
