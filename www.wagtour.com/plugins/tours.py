@@ -28,9 +28,11 @@ def preBuild(site):
 
 	global TOURS
 
+	page_num = 0
 	for page in site.pages():
 		if page.path.startswith(TOURS_PATH):
 
+			page_num += 1
 			# Skip non html posts for obious reasons
 			if not page.path.endswith('.html'):
 				continue
@@ -54,6 +56,7 @@ def preBuild(site):
 			tourContext['description2'] = find('description2')
 			tourContext['n_days'] = find('n_days')
 			tourContext['price'] = find('price')
+			tourContext['page_num'] = page_num
 
 			TOURS.append(tourContext)
 
