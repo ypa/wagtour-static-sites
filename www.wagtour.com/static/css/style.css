@@ -2374,7 +2374,7 @@ svg image:hover {
 	opacity: 0;
 }
 
-.tour{
+.related-tour {
 	border:1px solid #DDD;
 	background-color:#fff;
 	border-radius:4px;
@@ -2382,5 +2382,11 @@ svg image:hover {
 	-webkit-border-radius:4px;
 	padding:0 15px 5px 15px;
 	margin-top: 60px;
+	margin-bottom:20px;
+}
+
+.main-tour {
+	margin-top: 60px;
+	padding:0 15px 5px 15px;
 	margin-bottom:20px;
 }
