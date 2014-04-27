@@ -57,6 +57,7 @@ def preBuild(site):
 			tourContext['n_days'] = find('n_days')
 			tourContext['price'] = find('price')
 			tourContext['page_num'] = page_num
+			tourContext['tour_num'] = find('tour_num')
 
 			TOURS.append(tourContext)
 
@@ -68,8 +69,11 @@ def preBuildPage(site, page, context, data):
 	access them from wherever on the site.
 	"""
 	context['tours'] = TOURS
-
 	for tour in TOURS:
+		images = get_tour_images(tour['tour_num'])
+		if images:
+			tour['images'] = images
+			tour['main_image'] = images[0]
 		if tour['path'] == page.path:
 			context.update(tour)
 			context['this_tour'] = tour
@@ -85,4 +89,10 @@ def chunks(l, n):
     """
     for i in xrange(0, len(l), n):
         yield l[i:i+n]
+
+
+def get_tour_images(tour_num):
+	img_dir = "./static/img/tours/%s/" % (tour_num)
+	return [ f for f in os.listdir(img_dir) if f.endswith('.jpg')]
+
 

@@ -20,6 +20,11 @@
 							<!-- MAIN TOUR CONTENT
 				            ================================================== -->			            
 								<h1>{{ title }}</h1>
+								<ol>
+								{% for img in this_tour.images %}
+								<a href="#" class="thumbnail"><img src="{{ STATIC_URL }}/img/tours/{{ this_tour.tour_num }}/{{img}}"></a>
+								{% endfor %}
+								</ol>
 								<p>{{ description }}</p>
 								<p>{{ description1 }}</p>
 								<p>{{ description2 }}</p>
