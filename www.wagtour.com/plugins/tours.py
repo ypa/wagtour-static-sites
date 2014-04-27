@@ -72,7 +72,7 @@ def preBuildPage(site, page, context, data):
 	for tour in TOURS:
 		images = get_tour_images(tour['tour_num'])
 		if images:
-			tour['images'] = images
+			tour['image_rows'] = list(chunks(images, 3))
 			tour['main_image'] = images[0]
 		if tour['path'] == page.path:
 			context.update(tour)
