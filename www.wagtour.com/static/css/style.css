@@ -2402,3 +2402,7 @@ svg image:hover {
 	-moz-box-shadow:    9px 7px 17px 0px rgba(50, 50, 50, 0.75);
 	box-shadow:         9px 7px 17px 0px rgba(50, 50, 50, 0.75);
 }
+
+.thumb-active {
+	background-color: #3283ED;
+}
