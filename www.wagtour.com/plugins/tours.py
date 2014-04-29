@@ -93,6 +93,6 @@ def chunks(l, n):
 
 def get_tour_images(tour_num):
 	img_dir = "./static/img/tours/%s/" % (tour_num)
-	return [ f for f in os.listdir(img_dir) if f.endswith('.jpg')]
+	return sorted([ f for f in os.listdir(img_dir) if f.endswith('.jpg')])
 
 
