@@ -57,16 +57,13 @@
 								<div id="collapseOne" class="accordion-body collapse in">
 									<div class="accordion-inner">
 										<ul class="nav nav-list">
-											<li><a href="listings.html">» Auto</a><span>(35)</span></li>
-											<li><a href="listings.html">» Beauty and Fitness</a><span>(4419)</span></li>
-											<li><a href="listings.html">» Entertainment</a><span>(13082)</span></li>
-											<li><a href="listings.html">» Food and Dining</a><span>(4998)</span></li>
-											<li><a href="listings.html">» Gifts and Flowers</a><span>(8106)</span></li>
-											<li><a href="listings.html">» Health</a><span>(24)</span></li>
-											<li><a href="listings.html">» Lawyer</a><span>(5)</span></li>
-											<li><a href="listings.html">» Real Estate</a><span>(1)</span></li>
-											<li><a href="listings.html">» Sports</a><span>(2022)</span></li>
-											<li><a href="listings.html">» Travel</a><span>(3204)</span></li>
+										{% for row in rows %}
+											{% for tour in row %}
+												{% if not tour.title == this_tour.title %}
+												<li><a href="{{ ROOT_URL }}/{{ tour.path }}">{{ tour.title |truncatechars:52}}</a></li>
+												{% endif %}
+											{% endfor %}
+										{% endfor %}
 										</ul>
 									</div>
 								</div>
