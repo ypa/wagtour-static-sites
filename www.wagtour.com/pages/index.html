@@ -100,7 +100,7 @@
 					</a>
 					<div class="projectdesc">
 						<p>
-							 {{ tour.description }}
+							 {{ tour.description |first }}
 						</p>
 						<p>
 							<a href="{{ ROOT_URL }}/{{ tour.path }}" class="minibutton">view package</a>
