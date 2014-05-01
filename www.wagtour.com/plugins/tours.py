@@ -51,9 +51,7 @@ def preBuild(site):
 			tourContext['title'] = find('title')
 			tourContext['path'] = page.path
 			tourContext['city'] = find('city')
-			tourContext['description'] = find('description')
-			tourContext['description1'] = find('description1')
-			tourContext['description2'] = find('description2')
+			tourContext['description'] = [p.strip() for p in find('description').split('|')]
 			tourContext['n_days'] = find('n_days')
 			tourContext['price'] = find('price')
 			tourContext['page_num'] = page_num

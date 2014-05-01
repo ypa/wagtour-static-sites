@@ -38,9 +38,9 @@
 								</div> <!-- thumbs -->
 								<br/>
 								<div id="descriptions">
-									<p>{{ description }}</p>
-									<p>{{ description1 }}</p>
-									<p>{{ description2 }}</p>
+									{% for p in description %}
+									<p>{{ p }}</p>
+									{% endfor %}
 								</div>
 							</div>
 						</div><!--/.main-tour tour-->
