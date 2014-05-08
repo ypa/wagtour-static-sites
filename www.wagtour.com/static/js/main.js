@@ -30,7 +30,9 @@ $("#submit").click(function(event){
         url: "http://www.vizitmyanmar.com/api/email/",
         type: "POST",
         dataType: "json", 
-        data: serializedData
+        data: JSON.stringify(serializedData),
+        contentType: "application/json",
+
     });
 
     // callback handler that will be called on success
