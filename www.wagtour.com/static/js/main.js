@@ -14,6 +14,14 @@ $(document).ready(function() {
 });
 
 
+var updateContactStatus = function(status) {
+	if (status == "success") {
+		$("#contactform").prepend('<div class="success"><span class="success">Success</span></div>');
+		console.log("Booyah!");
+	}
+}
+
+
 $("#submit").click(function(event){
 
     var $form = $("#contactform");
@@ -37,8 +45,7 @@ $("#submit").click(function(event){
 
     // callback handler that will be called on success
     request.done(function (response, textStatus, jqXHR){
-        // log a message to the console
-        console.log("Response: " + response);
+        updateContactStatus(textStatus);
     });
 
     // callback handler that will be called on failure
