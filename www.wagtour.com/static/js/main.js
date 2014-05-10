@@ -15,10 +15,22 @@ $(document).ready(function() {
 
 
 var updateContactStatus = function(status) {
+	var $form = $("#contactform");
 	if (status == "success") {
-		$("#contactform").prepend('<div class="success"><span class="success">Success</span></div>');
-		console.log("Booyah!");
-	}
+		var $inputs = $form.find("input, select, button, textarea");
+		$inputs.each(function() {
+			if (this.value != 'Submit') {
+				$(this).val('');				
+			}
+		});
+		$form.prepend('<div class="success"><span class="success">Your message was successfully submitted.</span></div>');
+	} else {
+		errorStatus();
+	} 
+}
+
+var errorStatus = function() {
+		$("#contactform").prepend('<div class="status"><span class="status">Something went wrong, please contact us at the e-mail listed on top of this website.</span></div>');
 }
 
 
@@ -51,6 +63,7 @@ $("#submit").click(function(event){
     // callback handler that will be called on failure
     request.fail(function (jqXHR, textStatus, errorThrown){
         // log the error to the console
+        errorStatus();
         console.error(
             "The following error occured: "+
             textStatus, errorThrown
