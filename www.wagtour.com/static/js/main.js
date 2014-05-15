@@ -11,6 +11,17 @@ $(document).ready(function() {
 		$(this).addClass("thumb-active");
 		$('#main-img img').attr('src',$(this).attr('src'));
 	});
+
+
+	// Google map
+	$('#map_canvas').gmap().bind('init', function(ev, map) {
+		$('#map_canvas').gmap('addMarker', {'position': '16.818497, 96.159586', 'bounds': true}).mouseover(function() {
+			$('#map_canvas').gmap('openInfoWindow', {'content': '38 Pyi-daung-su Road, Bahan, Yangon'}, this);
+		});
+		$('#map_canvas').gmap('option', 'zoom', 15);
+	});
+
+
 });
 
 
