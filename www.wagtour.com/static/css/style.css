@@ -2375,6 +2375,7 @@ svg image:hover {
 }
 
 .related-tour {
+	position: fixed;
 	border:1px solid #DDD;
 	background-color:#fff;
 	border-radius:4px;

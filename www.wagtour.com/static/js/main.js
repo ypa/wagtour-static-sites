@@ -22,6 +22,16 @@ $(document).ready(function() {
 	});
 
 
+	if (!!$('.sticky').offset()) { 
+		var stickyTop = $('.sticky').offset().top; // returns number 
+		$(window).scroll(function(){ // scroll event
+			var windowTop = $(window).scrollTop(); // returns number 
+			if (stickyTop < windowTop){
+				$('.sticky').css({ top: 0 });
+			}
+		});
+	}
+
 });
 
 
