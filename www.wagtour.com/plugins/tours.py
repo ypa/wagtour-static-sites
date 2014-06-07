@@ -4,6 +4,7 @@ import logging
 
 ORDER = 999
 TOURS_PATH = 'tours/'
+IMG_PATH = './static/img/tours'
 TOURS = []
 
 from django.template import Context
@@ -90,7 +91,7 @@ def chunks(l, n):
 
 
 def get_tour_images(tour_num):
-	img_dir = "./static/img/tours/%s/" % (tour_num)
+	img_dir = "%s/%s/" % (IMG_PATH, tour_num)
 	return sorted([ f for f in os.listdir(img_dir) if f.endswith('.jpg')])
 
 
