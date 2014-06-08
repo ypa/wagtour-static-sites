@@ -1,11 +1,15 @@
 import os
 import datetime
 import logging
+import Image
+
 
 ORDER = 999
 TOURS_PATH = 'tours/'
 IMG_PATH = './static/img/tours'
 TOURS = []
+SIZES = [(300,300), (600, 600)]
+
 
 from django.template import Context
 from django.template.loader import get_template
@@ -69,7 +73,7 @@ def preBuildPage(site, page, context, data):
 	"""
 	context['tours'] = TOURS
 	for tour in TOURS:
-		images = get_tour_images(tour['tour_num'])
+		images = make_thumbs(tour['tour_num'])
 		if images:
 			tour['image_rows'] = list(chunks(images, 3))
 			tour['main_image'] = images[0]
@@ -91,7 +95,19 @@ def chunks(l, n):
 
 
 def get_tour_images(tour_num):
-	img_dir = "%s/%s/" % (IMG_PATH, tour_num)
-	return sorted([ f for f in os.listdir(img_dir) if f.endswith('.jpg')])
+    img_dir = "%s/%s/" % (IMG_PATH, tour_num)
+    return sorted([ f for f in os.listdir(img_dir) if f.endswith('.jpg')])
+
+
+def make_thumbs(tour_num):
+    images = get_tour_images(tour_num)
+    for image in images:
+            image_path = "%s/%s/%s" %(IMG_PATH, tour_num, image)
+            for size in SIZES:
+                thumb = Image.open(image_path)
+                thumb.thumbnail(size)
+                thumb_name = "%s/%s/thumb_%s_%s" % (IMG_PATH, tour_num, size[0], image)
+                thumb.save(thumb_name)
+    return  images
 
 
