@@ -62,6 +62,7 @@ def preBuild(site):
 			tourContext['page_num'] = page_num
 			tourContext['tour_num'] = find('tour_num')
 
+			make_thumbs(tourContext['tour_num'])
 			TOURS.append(tourContext)
 
 
@@ -73,7 +74,7 @@ def preBuildPage(site, page, context, data):
 	"""
 	context['tours'] = TOURS
 	for tour in TOURS:
-		images = make_thumbs(tour['tour_num'])
+		images = get_tour_images(tour['tour_num'])
 		if images:
 			tour['image_rows'] = list(chunks(images, 3))
 			tour['main_image'] = images[0]
@@ -108,6 +109,6 @@ def make_thumbs(tour_num):
                 thumb.thumbnail(size)
                 thumb_name = "%s/%s/thumb_%s_%s" % (IMG_PATH, tour_num, size[0], image)
                 thumb.save(thumb_name)
-    return  images
+    
 
 
