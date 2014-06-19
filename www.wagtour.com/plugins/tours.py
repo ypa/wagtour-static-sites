@@ -97,7 +97,8 @@ def chunks(l, n):
 
 def get_tour_images(tour_num):
     img_dir = "%s/%s/" % (IMG_PATH, tour_num)
-    return sorted([ f for f in os.listdir(img_dir) if f.endswith('.jpg')])
+    images = [ f for f in os.listdir(img_dir) if f.endswith('.jpg')]
+    return sorted(filter(lambda i: not i.startswith('thumb_'), images))
 
 
 def make_thumbs(tour_num):
